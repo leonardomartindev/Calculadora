@@ -12,6 +12,7 @@
    --primary-button: linear-gradient(138.91deg, rgba(255, 255, 255, 0.6) -4.74%, rgba(255, 255, 255, 0) 149.2%);
    --secondary-button: rgb(148, 203, 255);
    --equal: rgba(25, 172, 255, 1);
+   transition: color 0.3s ease;
 
 }
 
@@ -78,11 +79,17 @@ table tr td, table tr th{
     overflow: hidden;
 }
 
+.result::placeholder{
+    color: var(--primary-text);
+}
+
 .equal{
     background-color: var(--equal);
     color: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset -3px 4px 11px #B0DFFF;
 }
+
+
 
 /*NORMAL TABLE CALCULATOR*/
 
