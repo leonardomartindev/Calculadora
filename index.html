@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" >
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,92 +8,99 @@
     <link rel="stylesheet" href="style.css">
     <title>Calculadora</title>
 </head>
-<body>
-    <div class="container-normal-calculator">
-        <table>
-            <textarea class="result" id="" cols="2" rows="1">0</textarea>
-            <tr>
-                <td>Ac</td>
-                <td><i class="fa-solid fa-delete-left"></i></td>
-                <td><i class="fa-solid fa-divide"></i></td>
-                <td><i class="fa-solid fa-xmark"></i></td>
-            </tr>
-            <tr>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td><i class="fa-solid fa-minus"></i></td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td><i class="fa-solid fa-plus"></i></td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td rowspan="2" class="equal"><i class="fa-solid fa-equals"></i></td>
-            </tr>
-            <tr>
-                <td colspan="2">0</td>
-                <td>.</td>
-            </tr>
-        </table>
-    </div>
-    <div class="container-scientific-calculator">
-        <table>
-            <tr>
-                <td>2<sup>nd</sup></td>
-                <td>&pi;</td>
-                <td>e</td>
-                <td>C</td>
-                <td><i class="fa-solid fa-delete-left"></i></td>
-            </tr>
-            <tr>
-                <td>X<sup>2</sup></td>
-                <td><sup>1</sup>/<sub>x</sub></td>
-                <td>&vert;x&vert;</td>
-                <td>exp</td>
-                <td>mod</td>
-            </tr>
-            <tr>
-                <td>√x</td>
-                <td>&#40</td>
-                <td>&#41</td>
-                <td>n!</td>
-                <td><i class="fa-solid fa-divide"></i></td>
-            </tr>
-            <tr>
-                <td>x<sup>y</sup></td>
-                <td>7</td>
-                <td>8</td>
-                <td>9</td>
-                <td><i class="fa-solid fa-xmark"></i></td>
-            </tr>
-            <tr>
-                <td>10<sup>x</sup></td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td><i class="fa-solid fa-minus"></i></td>
-            </tr>
-            <tr>
-                <td>log</td>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td><i class="fa-solid fa-plus"></i></td>
-            </tr>
-            <tr>
-                <td>In</td>
-                <td><sup>+</sup>/<sub>-</sub></td>
-                <td>0</td>
-                <td>.</td>
-                <td><i class="fa-solid fa-equals"></i></td>
-            </tr>
-        </table>
-    </div>
+<body >
+    <i class="fa-solid fa-calculator scientific-icon"></i>
+        <div class="theme-toggle">
+            <div class="toggle-button"><i class="fa-solid fa-sun fa-moon"></i></div>
+        </div>
+        
+        <div class="container-normal-calculator">
+            <table class="normal-calculator-table">
+                <textarea class="result" id="" cols="2" rows="1">0</textarea>
+                <tr>
+                    <td>Ac</td>
+                    <td><i class="fa-solid fa-delete-left"></i></td>
+                    <td><i class="fa-solid fa-divide"></i></td>
+                    <td><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td rowspan="2" class="equal"><i class="fa-solid fa-equals"></i></td>
+                </tr>
+                <tr>
+                    <td colspan="2">0</td>
+                    <td>.</td>
+                </tr>
+            </table>
+        </div>
+        <div class="container-scientific-calculator hide">
+            <textarea class="result-scientific" id="" cols="2" rows="1">0</textarea>
+            <table class="scientific-calculator-table" >
+                <tr>
+                    <td>2<sup>nd</sup></td>
+                    <td>&pi;</td>
+                    <td>e</td>
+                    <td>C</td>
+                    <td><i class="fa-solid fa-delete-left"></i></td>
+                </tr>
+                <tr>
+                    <td>X<sup>2</sup></td>
+                    <td><sup>1</sup>/<sub>x</sub></td>
+                    <td>&vert;x&vert;</td>
+                    <td>exp</td>
+                    <td>mod</td>
+                </tr>
+                <tr>
+                    <td>√x</td>
+                    <td>&#40</td>
+                    <td>&#41</td>
+                    <td>n!</td>
+                    <td><i class="fa-solid fa-divide"></i></td>
+                </tr>
+                <tr>
+                    <td>x<sup>y</sup></td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td><i class="fa-solid fa-xmark"></i></td>
+                </tr>
+                <tr>
+                    <td>10<sup>x</sup></td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td><i class="fa-solid fa-minus"></i></td>
+                </tr>
+                <tr>
+                    <td>log</td>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td><i class="fa-solid fa-plus"></i></td>
+                </tr>
+                <tr>
+                    <td>In</td>
+                    <td><sup>+</sup>/<sub>-</sub></td>
+                    <td>0</td>
+                    <td>.</td>
+                    <td><i class="fa-solid fa-equals"></i></td>
+                </tr>
+            </table>
+        </div>  
+    <script src="script.js"></script>
 </body>
 </html>
