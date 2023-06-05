@@ -12,13 +12,14 @@
    --primary-button: linear-gradient(138.91deg, rgba(255, 255, 255, 0.6) -4.74%, rgba(255, 255, 255, 0) 149.2%);
    --secondary-button: rgb(148, 203, 255);
    --equal: rgba(25, 172, 255, 1);
-   transition: color 0.3s ease;
-
+   --hover-td: rgb(136, 136, 136);
+   --transition-duration: 3s;
 }
 
 html{
     font-size: 62.5%;
     background: var(--primary);
+    transition: all 0.3s ease;
 
 }
 
@@ -26,20 +27,29 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: background-color var(--transition-duration);
+
 }
 
 /*NORMAL TABLE CALCULATOR*/
 
 
 
-table tr td, table tr th{
+table tr td{
     background: var(--primary-button);
     padding: 1.5rem;
     border: solid linear-gradient(90deg, rgba(255,255,255, 0) 0%, rgba(255,255,255,0) 100%); 
     border-radius: 12px;
     text-align: center;
     cursor: pointer;
+    transition: .2s all ease;
 
+}
+
+
+
+table tr td:hover{
+    background-color: var(--hover-td);
 }
 
 .normal-calculator-table{
@@ -96,7 +106,7 @@ table tr td, table tr th{
 
 .scientific-calculator-table{
     font-size: 2.2rem;
-    color: var(--primary-text);
+    color: rgb(247, 73, 73);
     border-spacing: .5rem;
     width: 100%;
     font-weight: bolder;
@@ -111,7 +121,7 @@ table tr td, table tr th{
     background-color: transparent;
     outline: none;
     font-size: 4rem;
-    color: var(--primary-text);
+    color: rgb(247, 73, 73);
     font-weight: 600;
     font-family: Arial, Helvetica, sans-serif;
     text-align: right;
@@ -188,6 +198,9 @@ table tr td, table tr th{
    --primary-button: #303136;
    --secondary-button: rgb(148, 203, 255);
    --equal: rgba(25, 172, 255, 0.6);
+   --hover-td: rgb(61, 61, 61);
+   --transition-duration: 0.3s;
+
   }
 
 
