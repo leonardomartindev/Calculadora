@@ -4,5 +4,5 @@ const trsScientific = scientificTable.querySelectorAll("tr");
 
 trsScientific.forEach((linha)=>{
     const tdsScientific = linha.querySelectorAll("td");
-    console.log(tdsScientific)
+    // console.log(tdsScientific)
 })

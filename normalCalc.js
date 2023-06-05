@@ -69,3 +69,46 @@ function formatResultado(resultado) {
   const num = parseFloat(resultado);
   return num % 1 !== 0 ? num.toFixed(1) : num.toString();
 }
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key;
+  const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, '.'];
+  const operators = ['/', '*', '-', '+', '.'];
+
+  if (numbers.includes(Number(key))) {
+    // Tecla pressionada é um número
+    textArea.value += key;
+  } else if (operators.includes(key)) {
+    // Tecla pressionada é um operador
+    const currentInput = textArea.value.trim();
+    const lastChar = currentInput.charAt(currentInput.length - 1);
+
+    // Verificar se o último caractere é um operador
+    const isLastCharOperator = operators.includes(lastChar);
+
+    if (currentInput.length === 0) {
+      // Não é permitido começar com um operador
+      return;
+    }
+
+    if (isLastCharOperator) {
+      // Substituir o último operador pelo novo operador
+      textArea.value = currentInput.slice(0, -1) + key;
+    } else {
+      // Adicionar o operador normalmente
+      textArea.value += key;
+    }
+  } else if (event.keyCode === 13) {
+    // Tecla pressionada é a tecla Enter (código de tecla 13)
+    if (!textArea.value) {
+      window.alert("É necessário inserir uma expressão matemática válida");
+      return;
+    }
+    const resultado = eval(textArea.value);
+    textArea.value = formatResultado(resultado);
+  }
+
+  // handleButtonPress(key)
+});
+
+
