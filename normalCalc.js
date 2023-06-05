@@ -1,4 +1,5 @@
-const normalTable = document.querySelector("table");
+const normalTable = document.querySelector(".container-normal-calculator").querySelector(".normal-calculator-table");
+
 const trs = normalTable.querySelectorAll("tr");
 
 trs.forEach((linha) => {
@@ -44,7 +45,7 @@ trs.forEach((linha) => {
           return;
         }
         const resultado = eval(textArea.value);
-        textArea.value = parseFloat(resultado).toFixed(1) ;
+        textArea.value = formatResultado(resultado);
       }
     });
   });
@@ -62,4 +63,9 @@ function isValidNumber(expression) {
   const lastChar = expression.slice(-1);
   const operators = ["*", "+", "-", "/"];
   return !(operators.includes(lastChar) || expression === "");
+}
+
+function formatResultado(resultado) {
+  const num = parseFloat(resultado);
+  return num % 1 !== 0 ? num.toFixed(1) : num.toString();
 }
