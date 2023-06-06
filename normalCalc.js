@@ -108,7 +108,6 @@ document.addEventListener("keydown", (event) => {
     textArea.value = formatResultado(resultado);
   }
 
-  // handleButtonPress(key)
 });
 
 
