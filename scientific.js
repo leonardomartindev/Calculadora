@@ -108,6 +108,7 @@ const actions = {
     }
   },
   "equal-btn": () => {
+    if(!textarea.value) return
     textarea.value = eval(resultado);
   },
   "ten-exp": () => {
