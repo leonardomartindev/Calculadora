@@ -12,6 +12,17 @@ const actions = {
     textarea.value += td.innerText;
     resultado += td.innerText;
   },
+  "parenteses-left": (td) => {
+    
+    textarea.value += "(";
+    resultado += "*("
+  },
+  "parenteses": (td) => {
+    if(!textarea.value) return
+
+    textarea.value += ")";
+    resultado += ")"
+  },
   divide: () => {
     textarea.value += "/";
     resultado += "/";
